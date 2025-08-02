@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}My ToDo List{% endblock %}
+
+{% block content %}
+  <h1>Your ToDo List</h1>
+  <ul>
+    {% for item in todos %}
+      <li>{{ item.title }} - {% if item.completed %}Completed{% else %}Pending{% endif %}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
